@@ -10,6 +10,7 @@ import Detail from "./Pages/Detail";
 import Home from "./Pages/Home";
 import Product from "./Pages/Product";
 import NotFound from "./Pages/NotFound";
+import Auth from "./Pages/Auth";
 import Blog from "./Pages/Blog";
 
 const App = () => {
@@ -17,9 +18,10 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
         <Route path="/index" element={<Home />} />
-        <Route path="product" element={<Product />} />
-        <Route path="product-detail" element={<Detail />} />
-        <Route path="Blog" element={<Blog />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/product-detail" element={<Detail />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )
