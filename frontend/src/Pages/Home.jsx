@@ -1,5 +1,13 @@
+import Jumbotron from "../components/Jumbotron";
+import Product from "../Pages/Product";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Jumbotron />
+      <Product />
+    </div>
+  );
 };
 
 export default Home;

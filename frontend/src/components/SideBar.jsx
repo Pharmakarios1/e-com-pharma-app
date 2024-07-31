@@ -1,14 +1,13 @@
 import { CiCircleChevDown, CiHome, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Search from "./Search";
-import User from "./Auth/User";
 
 const SideBar = () => {
   return (
     <>
-      <div className="hidden sm:flex flex-col bg-[#277c6f] h-12 justify-center shadow-2xl text-white">
+      <div className="hidden lg:flex flex-col bg-[#277c6f] h-12 justify-center shadow-xl text-white sticky top-0 z-10">
         <div className="flex p-2 justify-between sm:px-20">
-          <div className="link flex justify-between gap-4 ">
+          <div className="link flex justify-between gap-2 lg:gap-3 ">
             <Link to="/">
               <CiHome size={30} />
             </Link>
