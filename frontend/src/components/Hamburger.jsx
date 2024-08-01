@@ -7,7 +7,7 @@ const Bars = () => {
     <div>
       <Hamburger
         size={30}
-        color="#277c6f"
+        color="white"
         rounded
         toggled={open}
         toggle={setOpen}

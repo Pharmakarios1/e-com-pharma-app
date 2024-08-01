@@ -30,12 +30,13 @@ const FetchData = () => {
 
   return (
     <div>
-      <h2>Fetched Data</h2>
+      <h2>Fetched Data from the backend</h2>
       <ul>
         {data.map((item) => (
           <li key={item.id}>
             <span className="pr-2 text-red-500">{item.id}</span>
             {item.name}
+            {item.blog_detail}
           </li>
         ))}
       </ul>
