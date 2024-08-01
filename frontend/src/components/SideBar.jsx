@@ -1,4 +1,4 @@
-import { CiCircleChevDown, CiHome, CiSearch, CiUser } from "react-icons/ci";
+import { CiCircleChevDown, CiHome, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 

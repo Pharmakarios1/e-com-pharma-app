@@ -1,4 +1,5 @@
 import Jumbotron from "../components/Jumbotron";
+import Team from "../components/Team";
 import Product from "../Pages/Product";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Jumbotron />
       <Product />
+      <Team />
     </div>
   );
 };

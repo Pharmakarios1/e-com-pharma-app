@@ -12,16 +12,16 @@ import { useRef } from "react";
 
 const Nav = () => {
   const ref = useRef(null);
-  console.log(ref);
+  // console.log(ref);
   return (
     <div className="flex flex-col sm:justify-evenly md:px-20 ">
-      <div className="bg-[#31bda1]  flex justify-between md:bg-white shadow-2xl md:shadow-none sticky top-0">
+      <div className="bg-[#277c6f]  flex justify-between md:bg-white shadow-2xl md:shadow-none fixed w-full sm:sticky top-0 z-10 ">
         <div className="mobile-bar flex items-center md:hidden">
           <Bars />
           <Search ref={ref} />
         </div>
         <Link to="/" className="flex items-center gap-1">
-          <MdOutlineLocalPharmacy size={60} color="#277c6f" />
+          <MdOutlineLocalPharmacy size={60} color="black" />
           <div className="flex flex-col">
             <h2 className="font-bold sm:text-xl text-white md:text-[#277c6f]">
               Pharmakart
@@ -49,23 +49,23 @@ const Nav = () => {
           </div>
           <div className="flex py-3">
             <ul className="flex px-2 py-1 mx-auto gap-2 font-medium text-sm ">
-              <li className="hover:border-b-1 flex gap-1 items-center">
+              <li className="hover:underline underline-offset-2 transition-all delay-200 flex gap-1 items-center">
                 <FaStar color="orange" />
                 <Link to="/">196,555 Reviews</Link>
               </li>
-              <li className="hover:border-b-1 flex gap-1 items-center">
+              <li className="hover:underline underline-offset-2 transition-all delay-200 flex gap-1 items-center">
                 <MdOutlineDiamond size={15} />
                 <Link to="/">Loyalty</Link>
               </li>
-              <li className="hover:border-b-1 flex gap-1 items-center">
+              <li className="hover:underline underline-offset-2 transition-all delay-200 flex gap-1 items-center">
                 <CiDeliveryTruck size={18} />
                 <Link to="/">Delivery</Link>
               </li>
-              <li className="hover:border-b-1 flex gap-1 items-center">
+              <li className="hover:underline underline-offset-2 transition-all delay-200 flex gap-1 items-center">
                 <IoShirtOutline />
                 <Link to="/">Merch</Link>
               </li>
-              <li className="hover:border-b-1 flex gap-1 items-center">
+              <li className="hover:underline underline-offset-2 transition-all delay-200 flex gap-1 items-center">
                 <GoBook />
                 <Link to="/product">Hub</Link>
               </li>
