@@ -20,7 +20,7 @@ const CaroselCard = ({ item, about, content }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex gap-5 justify-start md:h-[80%] w-full  border-2 border-[#31bda1] rounded-md p-2 pr-6 md:p-6 shadow-2xl"
+        className="flex gap-5 justify-start md:h-[100%] w-full  border-2 border-[#31bda1] rounded-md p-2 pr-6 md:p-6 shadow-2xl"
       >
         <img src={item} alt="carousel" className="rounded-md" />
         <div className="flex flex-col">
@@ -31,7 +31,7 @@ const CaroselCard = ({ item, about, content }) => {
           <p className=" md:text-center text-white text-[13px] ">{content}</p>
           <img
             src={item}
-            className="rounded-lg md:mt-[2.8rem] w-2/3 mx-auto hidden md:block"
+            className="rounded-full md:mt-[2.8rem] w-1/3 mx-auto hidden md:block animate-pulse"
           />
         </div>
       </motion.div>

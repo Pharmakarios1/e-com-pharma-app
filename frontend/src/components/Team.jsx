@@ -1,59 +1,59 @@
 import React from "react";
-import one from "../assets/static";
+import { images } from "../assets/static";
 import Customer from "./Customer";
 import { FaStar } from "react-icons/fa";
 
 const Team = () => {
   return (
     <div className="m-h-screen bg-[#ecf9f7] p-10">
-      <div className="flex flex-col flex-wrap m-10">
-        <h1 className="text-[2.5rem] text-center text-[#277] pb-10">
+      <div className="flex flex-col flex-wrap md:m-10">
+        <h1 className="how-it-works text-[2.5rem] text-center text-[#277] pb-10">
           How does it work?
         </h1>
         <div className="flex justify-between md:items-center flex-col md:flex-row w-full">
-          <div className="flex md:flex-col items-center w-72">
+          <div className="flex md:flex-col items-center md:w-72 w-full gap-12">
             <div className="icon">
-              <img src={one} alt="" className="" />
+              <img src={images.one} alt="" className="w-[60%]" />
             </div>
             <div className="flex flex-col md:items-center mt-5">
-              <h2 className="text-[#277] font-bold md:text-2xl">
+              <h2 className="text-[#277] font-bold md:text-xl lg:text-2xl">
                 Online consultation
               </h2>
-              <p className="md:text-center text-sm md:text-[16px]">
+              <p className="md:text-center text-sm md:text-[14px] lg:text-[16px]">
                 Complete a short questionnaire to check your eligibility for
                 treatment
               </p>
             </div>
           </div>
-          <div className="flex md:flex-col items-center w-72">
+          <div className="flex md:flex-col items-center md:w-72 w-full gap-5">
             <div className="icon">
-              <img src={one} alt="" className="" />
+              <img src={images.two} alt="" className="w-[60%]" />
             </div>
             <div className="flex flex-col md:items-center mt-5">
-              <h2 className="text-[#277] font-bold md:text-2xl">
+              <h2 className="text-[#277] font-bold md:text-xl lg:text-2xl">
                 Choose a treatment
               </h2>
-              <p className="md:text-center text-sm md:text-[16px]">
+              <p className="md:text-center text-sm md:text-[14px] lg:text-[16px]">
                 Select the treatment or medication you need from leading brands
               </p>
             </div>
           </div>
-          <div className="flex md:flex-col items-center w-72">
+          <div className="flex md:flex-col items-center md:w-72 w-full gap-5">
             <div className="icon">
-              <img src={one} alt="" className="" />
+              <img src={images.three} alt="" className="w-[60%]" />
             </div>
             <div className="flex flex-col md:items-center mt-5">
-              <h2 className="text-[#277] font-bold md:text-2xl">
+              <h2 className="text-[#277] font-bold md:text-xl lg:text-2xl">
                 Express delivery
               </h2>
-              <p className="md:text-center text-sm md:text-[16px]">
+              <p className="md:text-center text-sm md:text-[14px] lg:text-[16px]">
                 Medication is dispensed and delivered to your home or work
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-white rounded-md my-10 mx-auto p-7 shadow-md flex flex-col place-items-center">
+      <div className="team-block bg-white rounded-md my-10 mx-auto p-7 shadow-md flex flex-col place-items-center">
         <h2 className="text-center text-[#277] font-bold text-2xl">
           A fully qualified team
         </h2>
@@ -67,7 +67,7 @@ const Team = () => {
               PCN Number: 97555454
             </span>
             <div className="w-36 h-36 rounded-full bg-[#277] absolute top-10">
-              <img src={one} alt="" />
+              <img src={images} alt="" />
             </div>
             <div className=" w- full p-4 rounded-full absolute bottom-0 flex flex-col items-center">
               <h2 className="font-bold text-[#277]">Mary Ufot (PharmD)</h2>
@@ -82,7 +82,7 @@ const Team = () => {
             </span>
             <div className="w-36 h-36 rounded-full bg-[#277] absolute top-10">
               {" "}
-              <img src={one} alt="" />
+              <img src={images} alt="" />
             </div>
             <div className=" w- full p-4 rounded-full absolute bottom-0 flex flex-col items-center">
               <h2 className="font-bold text-[#277]">Elvis Osas (BPharm)</h2>
@@ -97,7 +97,7 @@ const Team = () => {
             </span>
             <div className="w-36 h-36 rounded-full bg-[#277] absolute top-10">
               {" "}
-              <img src={one} alt="" />
+              <img src={images} alt="" />
             </div>
             <div className=" w- full p-4 rounded-full absolute bottom-0 flex flex-col items-center">
               <h2 className="font-bold text-[#277]">
@@ -114,7 +114,7 @@ const Team = () => {
             </span>
             <div className="w-36 h-36 rounded-full bg-[#277] absolute top-10">
               {" "}
-              <img src={one} alt="" />
+              <img src={images} alt="" />
             </div>
             <div className=" w- full p-4 rounded-full absolute bottom-0 flex flex-col items-center">
               <h2 className="font-bold text-[#277]">Henry Ethan(Mphil)</h2>
@@ -128,11 +128,11 @@ const Team = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-col my-5">
+      <div className="customer-review flex flex-col my-5">
         <h2 className="font-extrabold text-center text-[#277] text-xl mb-8">
           What our customers say
         </h2>
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="customer-review flex gap-4 justify-center flex-wrap">
           <Customer
             title="Trust Pilot 5 Star ranting"
             rating={<FaStar />}

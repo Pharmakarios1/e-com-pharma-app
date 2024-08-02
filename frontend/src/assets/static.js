@@ -2,9 +2,17 @@ import Folic from "./FolicAcid.jpg";
 import Sabresten from "./Sabrasten.jpg";
 import review from "./review.png";
 import one from "./1.png";
+import two from "./2.png";
+import three from "./3.png";
 
-export default one;
-
+export const icons = {
+  review,
+};
+export const images = {
+  one,
+  two,
+  three,
+};
 export const carouselArray = [
   //   {
   //     img: Folic,

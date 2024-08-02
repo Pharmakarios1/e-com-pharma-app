@@ -1,8 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import review from "../assets/static";
-
+import { icons } from "../assets/static/";
 const Review = () => {
   return (
     <div className=" flex items-center mt-14 md:hidden bg-white px-10 py-3 ">
@@ -20,7 +19,7 @@ const Review = () => {
           </Link>
         </div>
         <div>
-          <img src={review} alt="" />
+          <img src={icons.review} alt="" />
         </div>
       </div>
     </div>

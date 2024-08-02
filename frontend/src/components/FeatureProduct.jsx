@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
-import { FaHandPointUp } from "react-icons/fa";
 import TreatmentCard from "./TreatmentCard";
+import { IoFemale, IoMale, IoMaleFemaleOutline } from "react-icons/io5";
 
 const FeatureProduct = () => {
   return (
@@ -40,15 +40,18 @@ const FeatureProduct = () => {
             <Button>Others</Button>
           </NavLink>
         </div>
-        <div className="cards flex flex-wrap mt-10 gap-3 items-center">
-          <TreatmentCard title="Eretile Dysfunction" />
-          <TreatmentCard title="Urinary Tract Infection" />
-          <TreatmentCard title="Dysmenorrhea" />
-          <TreatmentCard title="Oligospermia" />
-          <TreatmentCard title="Weight Loss" />
-          <TreatmentCard title="Gastric Ulcer" />
-          <TreatmentCard title="Malaria" />
-          <TreatmentCard title="Alopecia" />
+        <div className="cards flex flex-wrap mt-10 gap-3 items-center justify-center">
+          <TreatmentCard title="Eretile Dysfunction" icon={<IoMale />} />
+          <TreatmentCard
+            title="Urinary Tract Infection"
+            icon={<IoMaleFemaleOutline />}
+          />
+          <TreatmentCard title="Dysmenorrhea" icon={<IoFemale />} />
+          <TreatmentCard title="Oligospermia" icon={<IoFemale />} />
+          <TreatmentCard title="Weight Loss" icon={<IoMaleFemaleOutline />} />
+          <TreatmentCard title="Gastric Ulcer" icon={<IoMaleFemaleOutline />} />
+          <TreatmentCard title="Malaria" icon={<IoMaleFemaleOutline />} />
+          <TreatmentCard title="Alopecia" icon={<IoMaleFemaleOutline />} />
         </div>
       </div>
     </div>
