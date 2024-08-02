@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="flex flex-col">
       <div className="flex flex-col gap-4">
         <h1 className="flex items-center text-white font-bold text-[2rem] justify-center text-center sm:text-[2.1rem]">
-          Nigerian Number Online Pharmacy!
+          Nigerian Number One Online Pharmacy!
         </h1>
         <p className="text-center text-white text-pretty font-medium text-[1rem] ">
           Rated 'excellent' and trusted by more than 1.35 million customers
