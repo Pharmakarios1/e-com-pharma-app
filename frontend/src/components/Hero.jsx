@@ -14,7 +14,7 @@ const Hero = () => {
           Rated 'excellent' and trusted by more than 1.35 million customers
         </p>
         <div className="search md:mt-5">
-          <div className="flex w-full sm:w-[22rem] bg-slate-100 rounded-md">
+          <div className="flex w-full lg:w-[22rem] bg-slate-100 rounded-md">
             <button className="bg-orange-600 w-20 flex items-center justify-center rounded-l">
               <CiSearch size={30} color="white" />
             </button>
@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden md:flex flex-col md:mt-10 shadow">
+      <div className=" hidden md:flex md:flex-row flex-col md:mt-10 shadow">
         <div className="flex flex-wrap  w-[27rem] h-24 p-3">
           <ul className="flex flex-wrap gap-4">
             <li className="flex gap-1 place-items-center text-white">
