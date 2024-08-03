@@ -33,13 +33,13 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="  md:flex md:flex-row flex-col md:mt-10 shadow">
-        <div className="flex flex-wrap  w-[27rem] h-24 p-3">
+      <div className=" hidden md:flex md:flex-row flex-col md:mt-10 shadow">
+        <div className="flex flex-wrap  w-[27rem] h-24 p-3 ">
           <motion.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 3 }}
-            className="flex flex-wrap gap-4"
+            className="flex  flex-wrap gap-4"
           >
             <li className="flex gap-1 place-items-center text-white">
               <CiBookmarkCheck size={25} color="black" />

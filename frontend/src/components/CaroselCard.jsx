@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
-const CaroselCard = ({ item, about, content }) => {
+const CaroselCard = ({ item, about, content, handleNext, handlePrev }) => {
   return (
     <div className="flex flex-col relative w-full">
       <div className="flex justify-between absolute top-0 inset-0 ">
@@ -10,6 +10,7 @@ const CaroselCard = ({ item, about, content }) => {
             size={25}
             color="white"
             className="bg-[#31bda1] rounded-full"
+            onClick={handlePrev}
           />
         </button>
         <button>
@@ -17,6 +18,7 @@ const CaroselCard = ({ item, about, content }) => {
             size={25}
             color="white"
             className="bg-[#31bda1] rounded-full"
+            onClick={handleNext}
           />
         </button>
       </div>
