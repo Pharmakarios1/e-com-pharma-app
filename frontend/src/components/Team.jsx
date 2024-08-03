@@ -67,13 +67,19 @@ const Team = () => {
               PCN Number: 97555454
             </span>
             <div className="w-36 h-36 rounded-full bg-[#277] absolute top-10">
-              <img src={images} alt="" />
+              <img
+                src={images.blessed}
+                alt=""
+                className="w-36 h-36 rounded-full"
+              />
             </div>
             <div className=" w- full p-4 rounded-full absolute bottom-0 flex flex-col items-center">
-              <h2 className="font-bold text-[#277]">Mary Ufot (PharmD)</h2>
+              <h2 className="font-bold text-[#277]">
+                Blessed Akhigbe (PharmD)
+              </h2>
               <p className="font-[500]">Superintendent Pharmacist</p>
               <p className="text-[12px]">Doctor of Pharmacy</p>
-              <p className="text-[12px]">University of Nigeria</p>
+              <p className="text-[12px]">University of Benin</p>
             </div>
           </div>
           <div className="flex flex-col w-64 h-72 bg-[#ecf9f7] rounded-lg relative items-center shadow hover:animate-pulse transition-all duration-700">
