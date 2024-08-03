@@ -1,17 +1,10 @@
 import Hamburger from "hamburger-react";
 import { useState } from "react";
 
-const Bars = () => {
-  const [open, setOpen] = useState(false);
+const Bars = ({ handleMobileMenu }) => {
   return (
-    <div>
-      <Hamburger
-        size={30}
-        color="white"
-        rounded
-        toggled={open}
-        toggle={setOpen}
-      />
+    <div onClick={handleMobileMenu} className="">
+      <Hamburger size={30} color="white" rounded />
     </div>
   );
 };
