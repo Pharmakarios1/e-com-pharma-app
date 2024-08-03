@@ -5,7 +5,7 @@ import { CiDeliveryTruck, CiHome, CiShoppingCart } from "react-icons/ci";
 import { FaAngleDown, FaStar } from "react-icons/fa";
 import { GoBook } from "react-icons/go";
 import Bars from "./Hamburger";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import User from "./Auth/User";
 import Search from "./Search";
 import { useRef, useState } from "react";
@@ -82,12 +82,15 @@ const Nav = () => {
         </div>
       </div>
       {mobileMenu && (
-        <div className=" absolute top-16 lg:hidden bg-white min-h-screen w-60 z-20 rounded-r-md shadow">
+        <div className="mobile absolute top-16 lg:hidden bg-white min-h-screen w-60 z-20 rounded-r-md shadow">
           <div className="flex p-3 flex-col gap-4 border-b border-[#277]">
-            <Link className="flex border-b text-[#277]">
+            <NavLink
+              to="/"
+              className="flex justify-between border-b text-[#277] p-1"
+            >
               <CiHome size={20} />
               <p>Home</p>
-            </Link>
+            </NavLink>
             <Link className="flex justify-between items-center text-[#277]">
               <p>Men's Health</p>
               <FaAngleDown />
