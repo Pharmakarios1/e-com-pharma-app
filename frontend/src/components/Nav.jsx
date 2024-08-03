@@ -20,7 +20,7 @@ const Nav = () => {
   return (
     <div className="flex flex-col sm:justify-evenly md:px-20 ">
       <div className="bg-[#277c6f]  flex justify-between md:bg-white shadow-2xl md:shadow-none fixed w-full sm:sticky top-0 z-10 ">
-        <div className="mobile-bar flex items-center md:hidden">
+        <div className="mobile-bar flex items-center lg:hidden">
           <Bars handleMobileMenu={handleMobileMenu} />
           <Search ref={ref} />
         </div>

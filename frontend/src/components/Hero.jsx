@@ -1,5 +1,5 @@
 import { CiBookmarkCheck, CiCircleInfo, CiSearch } from "react-icons/ci";
-import FetchData from "../FetchData";
+import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import { IoBagAdd } from "react-icons/io5";
 
@@ -7,9 +7,14 @@ const Hero = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col gap-4">
-        <h1 className="flex items-center text-white font-bold text-[2rem] justify-center text-center sm:text-[2.1rem]">
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 3 }}
+          className="flex items-center text-white font-bold text-[2rem] justify-center text-center sm:text-[2.1rem]"
+        >
           Nigerian Number One Online Pharmacy!
-        </h1>
+        </motion.h1>
         <p className="text-center text-white text-pretty font-medium text-[1rem] ">
           Rated 'excellent' and trusted by more than 1.35 million customers
         </p>
@@ -28,9 +33,14 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden md:flex md:flex-row flex-col md:mt-10 shadow">
+      <div className="  md:flex md:flex-row flex-col md:mt-10 shadow">
         <div className="flex flex-wrap  w-[27rem] h-24 p-3">
-          <ul className="flex flex-wrap gap-4">
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+            className="flex flex-wrap gap-4"
+          >
             <li className="flex gap-1 place-items-center text-white">
               <CiBookmarkCheck size={25} color="black" />
               9ja registered Pharmacy
@@ -47,13 +57,7 @@ const Hero = () => {
               <FaStar size={25} color="orange" />
               197,055 customer reviews
             </li>
-          </ul>
-        </div>
-        <div className="flex flex-col mt-4 animate-pulse">
-          <h1 className="text-white">Featured Products!</h1>
-          <div className="flex">
-            <FetchData />
-          </div>
+          </motion.ul>
         </div>
       </div>
     </div>
