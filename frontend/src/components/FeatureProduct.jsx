@@ -17,6 +17,9 @@ const FeatureProduct = () => {
       </p>
       <div className="flex flex-col mt-5">
         <div className="categories flex flex-wrap justify-between gap-2">
+          <NavLink to="/">
+            <Button>Popular</Button>
+          </NavLink>
           <NavLink to="/blog">
             <Button>All Treatments</Button>
           </NavLink>
@@ -24,9 +27,6 @@ const FeatureProduct = () => {
             <Button> View Products</Button>
           </NavLink>
 
-          <NavLink to="/">
-            <Button>Popular</Button>
-          </NavLink>
           <NavLink to="/men">
             <Button>Men's</Button>
           </NavLink>

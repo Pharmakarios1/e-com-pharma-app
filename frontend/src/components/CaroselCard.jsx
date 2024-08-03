@@ -1,36 +1,21 @@
 import { motion } from "framer-motion";
-import { FaArrowCircleLeft } from "react-icons/fa";
-import { FaArrowCircleRight } from "react-icons/fa";
-const CaroselCard = ({ item, about, content, handleNext, handlePrev }) => {
+
+const CaroselCard = ({ img, activeIndex }) => {
   return (
-    <div className="flex flex-col relative w-full">
-      <div className="flex justify-between absolute top-0 inset-0 ">
-        <button>
-          <FaArrowCircleLeft
-            size={25}
-            color="white"
-            className="bg-[#31bda1] rounded-full"
-            onClick={handlePrev}
-          />
-        </button>
-        <button>
-          <FaArrowCircleRight
-            size={25}
-            color="white"
-            className="bg-[#31bda1] rounded-full"
-            onClick={handleNext}
-          />
-        </button>
-      </div>
+    <div className="flex flex-col w-full">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex gap-5 justify-center items-center lg:justify-start md:h-[100%] w-full  rounded-md p-2 md:p-6 shadow-2xl"
+        className="flex gap-5 justify-center items-center lg:justify-start md:h-[100%] w-full  rounded-md p-2 md:p-6 shadow-2xl lg:mt-12"
       >
         <div className="mx-auto w-full">
-          <img src={item} alt="carousel" className="rounded-md w-full h-60 " />
-          <div className="flex flex-col">
+          <img
+            src={img[activeIndex]}
+            alt="carousel"
+            className="rounded-md w-full h-56 lg:h-80 lg:shadow-2xl "
+          />
+          {/* <div className="flex flex-col">
             <h2 className=" hidden xl:block text-center text-xl font-bold">
               Featured Product
             </h2>
@@ -40,11 +25,11 @@ const CaroselCard = ({ item, about, content, handleNext, handlePrev }) => {
             <p className="hidden xl:block md:text-center text-white text-[13px] ">
               {content}
             </p>
-            {/* <img
+            <img
               src={item}
               className=" rounded-full md:mt-[2.8rem] w-1/3 mx-auto hidden xl:block animate-pulse"
-            /> */}
-          </div>
+            />
+          </div> */}
         </div>
       </motion.div>
     </div>
