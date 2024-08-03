@@ -29,7 +29,7 @@ const Footer = () => {
 
   return (
     <div className="min-h-screen bg-[#277c67]">
-      <div className="flex bg-[#0A2034] text-white flex-col p-5 h-56 lg:h-24 lg:px-20 gap-2 md:flex-row md:justify-between items-center">
+      <div className="flex bg-[#0A2034] text-white flex-col p-5  h-60 lg:h-24 lg:px-20 gap-2 md:flex-row md:justify-between items-center">
         <div className="flex socials gap-2 justify-center">
           <FaFacebookSquare size={28} />
           <FaInstagramSquare size={28} />
