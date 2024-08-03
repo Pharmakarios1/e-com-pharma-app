@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 import TreatmentCard from "./TreatmentCard";
 import { IoFemale, IoMale, IoMaleFemaleOutline } from "react-icons/io5";
@@ -17,11 +17,14 @@ const FeatureProduct = () => {
       </p>
       <div className="flex flex-col mt-5">
         <div className="categories flex flex-wrap justify-between gap-2">
-          <NavLink to="/">
+          <NavLink to="/blog">
             <Button>All Treatments</Button>
           </NavLink>
+          <NavLink to="/product">
+            <Button> View Products</Button>
+          </NavLink>
 
-          <NavLink to="/popular">
+          <NavLink to="/">
             <Button>Popular</Button>
           </NavLink>
           <NavLink to="/men">
@@ -53,6 +56,12 @@ const FeatureProduct = () => {
           <TreatmentCard title="Malaria" icon={<IoMaleFemaleOutline />} />
           <TreatmentCard title="Alopecia" icon={<IoMaleFemaleOutline />} />
         </div>
+        <Link
+          to="/blog"
+          className="mt-5 text-center text-white hover:underline underline-offset-4 w-full bg-[#277c67] p-1 rounded-md mb-10"
+        >
+          View More
+        </Link>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const Carousel = () => {
         initial={{ x: 0 }}
         animate={{ x: -activeIndex * 100 }}
         transition={{ duration: 0.5 }}
-        className=" mt-5 flex lg:w-[55%] h-44 md:h-[100%] md:mt-16 mx-auto flex-wrap"
+        className=" mt-5 flex lg:w-[55%] w-full h-44 md:h-[100%] md:mt-16 mx-auto flex-wrap"
       >
         {carouselArray.map((item, index) => (
           <CaroselCard
