@@ -10,10 +10,14 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 3 }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+          }}
+          // whileHover={{ color: "#EA580C" }}
           className="flex items-center text-white font-bold text-[2rem] justify-center text-center sm:text-[2.1rem]"
         >
-          Nigerian Number One Online Pharmacy!
+          Nigerian Leading Online Pharmacy!
         </motion.h1>
         <p className="text-center text-white text-pretty font-medium text-[1rem] ">
           Rated 'excellent' and trusted by more than 1.35 million customers

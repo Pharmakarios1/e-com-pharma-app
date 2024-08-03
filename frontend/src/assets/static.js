@@ -4,6 +4,7 @@ import review from "./review.png";
 import one from "./1.png";
 import two from "./2.png";
 import three from "./3.png";
+import blessed from "./bless.jpg";
 
 export const icons = {
   review,
@@ -12,6 +13,7 @@ export const images = {
   one,
   two,
   three,
+  blessed,
 };
 export const carouselArray = [
   "https://media.istockphoto.com/id/494066462/photo/pills-with-b9-folic-acid-element-dietary-supplements-vitamin-c.webp?b=1&s=170667a&w=0&k=20&c=p2pLaFm1SwjegRnyMg9vBkvSHZyA4bBIvDZRotI56b0=",

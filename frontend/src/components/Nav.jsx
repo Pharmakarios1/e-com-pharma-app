@@ -10,12 +10,31 @@ import User from "./Auth/User";
 import Search from "./Search";
 import { useRef, useState } from "react";
 import SideBar from "./SideBar";
+import { motion, AnimatePresence, transform, spring } from "framer-motion";
 
 const Nav = () => {
   const ref = useRef(null);
   const [mobileMenu, setMobileMenu] = useState(false);
   const handleMobileMenu = () => {
     setMobileMenu((prev) => !prev);
+
+    // const mobileColor = "white";
+
+    const container = {
+      hidden: {
+        opacity: 0,
+      },
+      visible: {
+        opacity: 1,
+        transition: {
+          ease: "linear",
+          duration: 3,
+          x: {
+            duration: 1,
+          },
+        },
+      },
+    };
   };
   return (
     <div className="flex flex-col sm:justify-evenly md:px-20 ">
@@ -25,15 +44,30 @@ const Nav = () => {
           <Search ref={ref} />
         </div>
         <Link to="/" className="flex items-center gap-1">
-          <MdOutlineLocalPharmacy size={60} color="black" />
-          <div className="flex flex-col">
+          <motion.div
+            className="div"
+            initial={{ x: "-100vw" }}
+            animate={{ x: 0, rotate: 360 }}
+            transition={{ duration: 2, type: "spring", damping: 30 }}
+          >
+            <MdOutlineLocalPharmacy
+              size={60}
+              // className={`${mobileColor} ? mobile: "#277c67" `}
+            />
+          </motion.div>
+          <motion.div
+            className="flex flex-col"
+            initial={{ opacity: 0, y: -200 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+          >
             <h2 className="font-bold sm:text-xl text-white md:text-[#277c6f]">
               Pharmakart
             </h2>
             <p className="text-[10px] md:text-[12px] text-white md:text-[#277c6f]">
               Adding Life to Years
             </p>
-          </div>
+          </motion.div>
         </Link>
         <div className="hidden md:flex flex-col">
           <div className="flex bg-[#277c6f] rounded-b-xl pb-2">
