@@ -13,29 +13,31 @@ import SideBar from "./SideBar";
 import { motion, AnimatePresence, transform, spring } from "framer-motion";
 
 const Nav = () => {
+  const [modal, setModal] = useState(false);
   const ref = useRef(null);
   const [mobileMenu, setMobileMenu] = useState(false);
   const handleMobileMenu = () => {
     setMobileMenu((prev) => !prev);
-
-    // const mobileColor = "white";
-
-    const container = {
-      hidden: {
-        opacity: 0,
-      },
-      visible: {
-        opacity: 1,
-        transition: {
-          ease: "linear",
-          duration: 3,
-          x: {
-            duration: 1,
-          },
+  };
+  const handleAuthModal = () => {
+    setModal((prev) => !prev);
+  };
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: "linear",
+        duration: 3,
+        x: {
+          duration: 1,
         },
       },
-    };
+    },
   };
+
   return (
     <div className="flex flex-col sm:justify-evenly md:px-20 ">
       <div className="bg-[#277c6f]  flex justify-between md:bg-white shadow-2xl md:shadow-none fixed w-full sm:sticky top-0 z-10 ">
@@ -110,9 +112,17 @@ const Nav = () => {
             </ul>
           </div>
         </div>
-        <div className="mobile-bar flex items-center gap-2 pr-2  md:hidden">
-          <User />
-          <CiShoppingCart size={28} className="text-white md:text-[#277c6f]" />
+        <div className="mobile-bar flex items-center gap-2 pr-2  md:hidden cursor-pointer">
+          <User modal={modal} setModal={handleAuthModal} />
+          <div className="relative">
+            <CiShoppingCart
+              size={28}
+              className="text-white md:text-[#277c6f]"
+            />
+            <span className="absolute w-4 h-4 -top-2 text-[12px] -right-2 bg-white rounded-full grid place-content-center text-red-600">
+              0
+            </span>
+          </div>
         </div>
       </div>
       {mobileMenu && (
