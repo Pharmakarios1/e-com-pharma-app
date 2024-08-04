@@ -12,6 +12,7 @@ import Product from "./Pages/Product";
 import NotFound from "./Pages/NotFound";
 import Auth from "./Pages/Auth";
 import Blog from "./Pages/Blog";
+import BlogDetails from "./Pages/BlogDetails";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/auth" element={<Auth />} />
         <Route path="/product-detail" element={<Detail />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )
