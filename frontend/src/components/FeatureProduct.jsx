@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 import TreatmentCard from "./TreatmentCard";
 import { IoFemale, IoMale, IoMaleFemaleOutline } from "react-icons/io5";
+import { treatment } from "../assets/static";
 
 const FeatureProduct = () => {
   return (
@@ -44,17 +45,46 @@ const FeatureProduct = () => {
           </NavLink>
         </div>
         <div className="cards flex flex-wrap mt-10 gap-3 items-center justify-center">
-          <TreatmentCard title="Eretile Dysfunction" icon={<IoMale />} />
+          <TreatmentCard
+            title="Eretile Dysfunction"
+            icon={<IoMale />}
+            img={treatment[7]}
+          />
           <TreatmentCard
             title="Urinary Tract Infection"
             icon={<IoMaleFemaleOutline />}
+            img={treatment[3]}
           />
-          <TreatmentCard title="Dysmenorrhea" icon={<IoFemale />} />
-          <TreatmentCard title="Oligospermia" icon={<IoFemale />} />
-          <TreatmentCard title="Weight Loss" icon={<IoMaleFemaleOutline />} />
-          <TreatmentCard title="Gastric Ulcer" icon={<IoMaleFemaleOutline />} />
-          <TreatmentCard title="Malaria" icon={<IoMaleFemaleOutline />} />
-          <TreatmentCard title="Alopecia" icon={<IoMaleFemaleOutline />} />
+          <TreatmentCard
+            title="Dysmenorrhea"
+            icon={<IoFemale />}
+            img={treatment[8]}
+          />
+          <TreatmentCard
+            title="Oligospermia"
+            icon={<IoFemale />}
+            img={treatment[6]}
+          />
+          <TreatmentCard
+            title="Weight Loss"
+            icon={<IoMaleFemaleOutline />}
+            img={treatment[5]}
+          />
+          <TreatmentCard
+            title="Gastric Ulcer"
+            icon={<IoMaleFemaleOutline />}
+            img={treatment[4]}
+          />
+          <TreatmentCard
+            title="Malaria"
+            icon={<IoMaleFemaleOutline />}
+            img={treatment[0]}
+          />
+          <TreatmentCard
+            title="Alopecia"
+            icon={<IoMaleFemaleOutline />}
+            img={treatment[2]}
+          />
         </div>
         <Link
           to="/blog"

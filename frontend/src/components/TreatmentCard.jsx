@@ -1,8 +1,13 @@
 import { FaAngleRight } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
 
 const TreatmentCard = ({ title, icon, img }) => {
+  const slug = useParams();
   return (
-    <div className="w-full sm:w-72 border-2 flex flex-col rounded-md shadow-2xl cursor-pointer hover:border-[#277c67] md:hover:bg-green-200 transition-all duration-6000 hover:animate-pulse">
+    <Link
+      to={`/blog/${slug}`}
+      className="w-full sm:w-72 border-2 flex flex-col rounded-md shadow-2xl cursor-pointer hover:border-[#277c67] md:hover:bg-green-200 transition-all duration-6000 hover:animate-pulse"
+    >
       <div className=" hidden img md:block  h-36  w-full">
         <img src={img} alt="" className="w-full h-[100%]" />
       </div>
@@ -13,7 +18,7 @@ const TreatmentCard = ({ title, icon, img }) => {
           <FaAngleRight size={20} color="white" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
