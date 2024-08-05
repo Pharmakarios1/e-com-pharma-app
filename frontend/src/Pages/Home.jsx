@@ -1,12 +1,12 @@
 import Jumbotron from "../components/Jumbotron";
 import Team from "../components/Team";
-import Product from "../Pages/Product";
+import Treatment from "./Treatment";
 
 const Home = () => {
   return (
     <div>
       <Jumbotron />
-      <Product />
+      <Treatment />
       <Team />
     </div>
   );

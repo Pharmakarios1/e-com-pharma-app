@@ -5,12 +5,6 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 const User = ({ modal, setModal }) => {
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setModal((prev) => !prev);
-  //   }, 4000);
-  //   return () => clearInterval(intervalId);
-  // }, [setModal]);
   return (
     <>
       <div
@@ -24,6 +18,7 @@ const User = ({ modal, setModal }) => {
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
+          whileHover={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="flex flex-col absolute top-12 right-3 h-40 w-28 text-sm bg-white shadow-lg rounded-md p-2 z-30"
         >

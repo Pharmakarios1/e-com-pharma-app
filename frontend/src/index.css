@@ -15,3 +15,19 @@ body{
 /* .active:hover{
     
 } */
+
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+  }
+  
+  .breadcrumbs li {
+    margin-right: 5px;
+  }
+  
+  .breadcrumbs li + li::before {
+    content: '>';
+    margin-right: 5px;
+    color: white;
+  }
+  
