@@ -2,8 +2,15 @@ import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import AuthModal from "./AuthModal";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const User = ({ modal, setModal }) => {
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setModal((prev) => !prev);
+  //   }, 4000);
+  //   return () => clearInterval(intervalId);
+  // }, [setModal]);
   return (
     <>
       <div
@@ -23,27 +30,36 @@ const User = ({ modal, setModal }) => {
           <Link
             to="/profile"
             className="text-[#277c67] hover:underline underline-offset-2"
+            onClick={setModal}
           >
             My Account
           </Link>
           <Link
             to="/profile"
             className="text-[#277c67] hover:underline underline-offset-2"
+            onClick={setModal}
           >
             My Orders
           </Link>
           <Link
             to="/profile"
             className="text-[#277c67] hover:underline underline-offset-2"
+            onClick={setModal}
           >
             My Points
           </Link>
 
           <div className="flex flex-col gap-2  rounded-md mt-2">
-            <button className="p-1 bg-[#288c67] rounded-md text-white">
+            <button
+              className="p-1 bg-[#288c67] rounded-md text-white"
+              onClick={setModal}
+            >
               <Link to="/auth">Log In</Link>
             </button>
-            <button className="p-1 text-[#288c67] rounded-md bg-white border-2 border-[#277c67]">
+            <button
+              className="p-1 text-[#288c67] rounded-md bg-white border-2 border-[#277c67]"
+              onClick={setModal}
+            >
               <Link to="/auth">Register</Link>
             </button>
           </div>

@@ -8,7 +8,7 @@ import Bars from "./Hamburger";
 import { Link, NavLink } from "react-router-dom";
 import User from "./Auth/User";
 import Search from "./Search";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SideBar from "./SideBar";
 import { motion, AnimatePresence, transform, spring } from "framer-motion";
 
@@ -16,6 +16,23 @@ const Nav = () => {
   const [modal, setModal] = useState(false);
   const ref = useRef(null);
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [logoColor, setLogoColor] = useState("#ffffff");
+
+  useEffect(() => {
+    const updateLogoColor = () => {
+      if (window.innerWidth >= 768) {
+        setLogoColor("#277c67");
+      } else {
+        setLogoColor("#ffffff");
+      }
+    };
+    window.addEventListener("resize", updateLogoColor);
+    updateLogoColor();
+    return () => {
+      window.removeEventListener("resize", updateLogoColor);
+    };
+  }, []);
+
   const handleMobileMenu = () => {
     setMobileMenu((prev) => !prev);
   };
@@ -52,10 +69,7 @@ const Nav = () => {
             animate={{ x: 0, rotate: 360 }}
             transition={{ duration: 2, type: "spring", damping: 30 }}
           >
-            <MdOutlineLocalPharmacy
-              size={60}
-              // className={`${mobileColor} ? mobile: "#277c67" `}
-            />
+            <MdOutlineLocalPharmacy size={60} color={logoColor} />
           </motion.div>
           <motion.div
             className="flex flex-col"
