@@ -1,8 +1,14 @@
 import { CiCircleChevDown, CiHome, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import User from "./Auth/User";
+import { useState } from "react";
 
 const SideBar = () => {
+  const [modal, setModal] = useState(false);
+  const handleAuthModal = () => {
+    setModal((prev) => !prev);
+  };
   return (
     <>
       <div className="hidden lg:flex flex-col bg-[#277c6f] h-12 justify-center shadow-xl text-white sticky top-0 z-10">
@@ -37,14 +43,15 @@ const SideBar = () => {
             </Link>
           </div>
           <div className="account flex gap-2">
-            <Link to="/auth" className="flex items-center gap-1">
-              <CiUser
+            <div className="flex items-center gap-1">
+              {/* <CiUser
                 size={25}
                 className="border-2 border-white rounded-full "
-              />
+              /> */}
+              <User modal={modal} setModal={handleAuthModal} />
               <p>Account</p>
               <CiCircleChevDown />
-            </Link>
+            </div>
           </div>
         </div>
       </div>

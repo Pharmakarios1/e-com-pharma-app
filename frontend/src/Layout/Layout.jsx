@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import SideBar from "../components/SideBar";
 import Review from "../components/Review";
+import Breadcrumb from "../components/Breadcrumb";
 
 const Layout = () => {
   return (
@@ -10,6 +11,7 @@ const Layout = () => {
       <Nav />
       <SideBar />
       <Review />
+      <Breadcrumb />
       <Outlet />
       <Footer />
     </>

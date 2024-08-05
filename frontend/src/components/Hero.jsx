@@ -1,4 +1,4 @@
-import { CiBookmarkCheck, CiCircleInfo, CiSearch } from "react-icons/ci";
+import { CiBookmarkCheck, CiSearch } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import { IoBagAdd } from "react-icons/io5";
