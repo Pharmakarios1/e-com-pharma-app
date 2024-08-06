@@ -52,7 +52,7 @@ const User = ({ modal, setModal }) => {
               <Link to="/auth">Log In</Link>
             </button>
             <button
-              className="p-1 text-[#288c67] rounded-md bg-white border-2 border-[#277c67]"
+              className="p-1 text-[#288c67] rounded-md bg-white border-[1px] border-[#277c67]"
               onClick={setModal}
             >
               <Link to="/auth">Register</Link>
