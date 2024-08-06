@@ -4,7 +4,10 @@ import { Link, useLocation } from "react-router-dom";
 function Breadcrumbs() {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
-
+  const hideBreadcrumbs = location.pathname === "/";
+  if (hideBreadcrumbs) {
+    return null;
+  }
   return (
     <nav>
       <ul className="breadcrumbs bg-[#31bda1] px-1 md:px-20 ">
