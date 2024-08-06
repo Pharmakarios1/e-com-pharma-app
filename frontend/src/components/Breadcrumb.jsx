@@ -1,8 +1,9 @@
 import { CiHome } from "react-icons/ci";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 function Breadcrumbs() {
   const location = useLocation();
+  const { slug } = useParams();
   const pathnames = location.pathname.split("/").filter((x) => x);
   const hideBreadcrumbs = location.pathname === "/";
   if (hideBreadcrumbs) {
