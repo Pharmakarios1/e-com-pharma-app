@@ -1,4 +1,4 @@
-import { CiCircleChevDown, CiHome, CiUser } from "react-icons/ci";
+import { CiCircleChevDown, CiHome, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import Search from "./Search";
 import User from "./Auth/User";
@@ -18,7 +18,7 @@ const SideBar = () => {
               <CiHome size={30} />
             </Link>
             <Link to="/">
-              <Search />
+              <CiSearch size={30} onClick={focus} />
             </Link>
             <Link to="/" className="flex items-center gap-1">
               Men's Health <CiCircleChevDown />
@@ -44,10 +44,6 @@ const SideBar = () => {
           </div>
           <div className="account flex gap-2">
             <div className="flex items-center gap-1">
-              {/* <CiUser
-                size={25}
-                className="border-2 border-white rounded-full "
-              /> */}
               <User modal={modal} setModal={handleAuthModal} />
               <p>Account</p>
               <CiCircleChevDown />

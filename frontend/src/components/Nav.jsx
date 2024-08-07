@@ -1,7 +1,12 @@
 import { MdOutlineLocalPharmacy } from "react-icons/md";
 import { IoShirtOutline } from "react-icons/io5";
 import { MdOutlineDiamond } from "react-icons/md";
-import { CiDeliveryTruck, CiHome, CiShoppingCart } from "react-icons/ci";
+import {
+  CiDeliveryTruck,
+  CiHome,
+  CiSearch,
+  CiShoppingCart,
+} from "react-icons/ci";
 import { FaAngleDown, FaStar } from "react-icons/fa";
 import { GoBook } from "react-icons/go";
 import Bars from "./Hamburger";
@@ -9,14 +14,13 @@ import { Link, NavLink } from "react-router-dom";
 import User from "./Auth/User";
 import Search from "./Search";
 import { useEffect, useRef, useState } from "react";
-import SideBar from "./SideBar";
 import { motion, AnimatePresence, transform, spring } from "framer-motion";
 
 const Nav = () => {
   const [modal, setModal] = useState(false);
-  const ref = useRef(null);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [logoColor, setLogoColor] = useState("#ffffff");
+  const inputRef = useRef();
 
   useEffect(() => {
     const updateLogoColor = () => {
@@ -54,13 +58,24 @@ const Nav = () => {
       },
     },
   };
+  const focus = () => {
+    inputRef.current.focus();
+  };
 
   return (
     <div className="flex flex-col sm:justify-evenly md:px-20 ">
       <div className="bg-[#277c6f]  flex justify-between md:bg-white shadow-2xl md:shadow-none fixed w-full sm:sticky top-0 z-10 ">
         <div className="mobile-bar flex items-center lg:hidden">
           <Bars handleMobileMenu={handleMobileMenu} />
-          <Search ref={ref} />
+          <CiSearch
+            size={30}
+            color="white"
+            onClick={focus}
+            className="cursor-pointer"
+          />
+          <div className="hidden">
+            <Search ref={inputRef} />
+          </div>
         </div>
         <Link to="/" className="flex items-center gap-1">
           <motion.div

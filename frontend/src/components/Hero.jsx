@@ -2,6 +2,7 @@ import { CiBookmarkCheck, CiSearch } from "react-icons/ci";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import { IoBagAdd } from "react-icons/io5";
+import Search from "./Search";
 
 const Hero = () => {
   return (
@@ -23,18 +24,7 @@ const Hero = () => {
           Rated 'excellent' and trusted by more than 1.35 million customers
         </p>
         <div className="search md:mt-5">
-          <div className="flex w-full lg:w-[22rem] bg-slate-100 rounded-md">
-            <button className="bg-orange-600 w-20 flex items-center justify-center rounded-l">
-              <CiSearch size={30} color="white" />
-            </button>
-            <input
-              type="search"
-              name="search"
-              id="search"
-              className="w-[90%] py-3 px-2 rounded-md  outline-none"
-              placeholder="Search Pharmakart..."
-            />
-          </div>
+          <Search />
         </div>
       </div>
       <div className=" hidden md:flex md:flex-row flex-col md:mt-10 shadow">
