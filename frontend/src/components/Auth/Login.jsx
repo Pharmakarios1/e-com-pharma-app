@@ -7,12 +7,15 @@ const Login = () => {
       <div className="shadow-xl flex justify-center text-xl font-bold text-[#277c67]">
         {auth ? "Login" : "Register"}
       </div>
-      <div className=" shadow-2xl w-full sm:w-72 mx-auto mt-10 p-10 sm:p-0">
-        <form action="" className="flex flex-col justify-center gap-4">
+      <div className="">
+        <form
+          action=""
+          className="grid grid-cols-5 gap-4 p-10 w-full md:col-[2/4]"
+        >
           <input
             type="email"
             placeholder="Enter your mail"
-            className="outline-none border-[#277c67] border-[1px] w-full rounded-md p-1"
+            className="outline-none border-[#277c67] border-[1px] w-full rounded-md p-1 "
           />
           <input
             type="password"
