@@ -10,7 +10,7 @@ const Login = () => {
       <div className="">
         <form
           action=""
-          className="grid grid-cols-5 gap-4 p-10 w-full md:col-[2/4]"
+          className="grid grid-cols-5 gap-4 p-10 w-full md:col-[2/4] flex"
         >
           <input
             type="email"
