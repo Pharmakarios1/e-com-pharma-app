@@ -23,7 +23,7 @@ const Login = () => {
             className="outline-none border-[#277c67] border-[1px] w-full rounded-md p-1"
           />
           <button className="bg-[#277c67] text-white rounded-md p-1">
-            Sign In
+            Login In
           </button>
         </form>
       </div>
