@@ -1,14 +1,15 @@
 import { CiCircleChevDown, CiHome, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import Search from "./Search";
 import User from "./Auth/User";
 import { useState } from "react";
+import { useFocus } from "../context/FocusContext";
 
 const SideBar = () => {
   const [modal, setModal] = useState(false);
   const handleAuthModal = () => {
     setModal((prev) => !prev);
   };
+  const { focusInput } = useFocus();
   return (
     <>
       <div className="hidden lg:flex flex-col bg-[#277c6f] h-12 justify-center shadow-xl text-white sticky top-0 z-10">
@@ -17,9 +18,9 @@ const SideBar = () => {
             <Link to="/">
               <CiHome size={30} />
             </Link>
-            <Link to="/">
-              <CiSearch size={30} onClick={focus} />
-            </Link>
+            <button onClick={focusInput}>
+              <CiSearch size={30} color="white" />
+            </button>
             <Link to="/" className="flex items-center gap-1">
               Men's Health <CiCircleChevDown />
             </Link>

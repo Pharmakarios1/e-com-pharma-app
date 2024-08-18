@@ -15,7 +15,7 @@ import User from "./Auth/User";
 import Search from "./Search";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, transform, spring } from "framer-motion";
-
+import { useFocus } from "../context/FocusContext";
 const Nav = () => {
   const [modal, setModal] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -58,21 +58,17 @@ const Nav = () => {
       },
     },
   };
-  const focus = () => {
-    inputRef.current.focus();
-  };
+  const { focusInput } = useFocus();
 
   return (
     <div className="flex flex-col sm:justify-evenly md:px-20 ">
       <div className="bg-[#277c6f]  flex justify-between md:bg-white shadow-2xl md:shadow-none fixed w-full sm:sticky top-0 z-10 ">
         <div className="mobile-bar flex items-center lg:hidden">
           <Bars handleMobileMenu={handleMobileMenu} />
-          <CiSearch
-            size={30}
-            color="white"
-            onClick={focus}
-            className="cursor-pointer"
-          />
+          <button onClick={focusInput}>
+            <CiSearch size={30} color="white" className="cursor-pointer" />
+          </button>
+
           <div className="hidden">
             <Search ref={inputRef} />
           </div>
