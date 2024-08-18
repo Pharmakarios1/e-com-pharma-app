@@ -1,8 +1,11 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
+import { useFocus } from "../context/FocusContext";
 
-const Search = ({ ref }) => {
+const Search = () => {
   const [search, setSearch] = useState("");
+
+  const { inputRef } = useFocus();
 
   return (
     <div>
@@ -15,7 +18,7 @@ const Search = ({ ref }) => {
           onChange={(e) => setSearch(e.target.value)}
           type="search"
           name="search"
-          ref={ref}
+          ref={inputRef}
           id="search"
           className="w-[90%] py-3 px-2 rounded-md  outline-none"
           placeholder="Search Pharmakart..."
