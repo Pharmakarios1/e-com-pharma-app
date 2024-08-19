@@ -15,12 +15,12 @@ import User from "./Auth/User";
 import Search from "./Search";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, transform, spring } from "framer-motion";
-import { useFocus } from "../context/FocusContext";
+import { useFocus } from "../context/AppContext";
 const Nav = () => {
   const [modal, setModal] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [logoColor, setLogoColor] = useState("#ffffff");
-  const inputRef = useRef();
+  // const inputRef = useRef();
 
   useEffect(() => {
     const updateLogoColor = () => {
@@ -69,9 +69,9 @@ const Nav = () => {
             <CiSearch size={30} color="white" className="cursor-pointer" />
           </button>
 
-          <div className="hidden">
+          {/* <div className="hidden">
             <Search ref={inputRef} />
-          </div>
+          </div> */}
         </div>
         <Link to="/" className="flex items-center gap-1">
           <motion.div

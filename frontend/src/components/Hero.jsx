@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 import { IoBagAdd } from "react-icons/io5";
 import Search from "./Search";
+import SearchResult from "./SearchResult";
 
 const Hero = () => {
   return (
@@ -53,6 +54,7 @@ const Hero = () => {
             </li>
           </motion.ul>
         </div>
+        <SearchResult />
       </div>
     </div>
   );

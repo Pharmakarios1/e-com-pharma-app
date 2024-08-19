@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import { useFocus } from "../context/FocusContext";
+import { useFocus } from "../context/AppContext";
+import { useSearch } from "../context/AppContext";
 
 const Search = () => {
-  const [search, setSearch] = useState("");
-
+  // const [search, setSearch] = useState("");
+  const { searchItem, setSearchItem } = useSearch();
   const { inputRef } = useFocus();
 
   return (
@@ -14,8 +15,8 @@ const Search = () => {
           <CiSearch size={30} color="white" />
         </button>
         <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={searchItem}
+          onChange={(e) => setSearchItem(e.target.value)}
           type="search"
           name="search"
           ref={inputRef}
