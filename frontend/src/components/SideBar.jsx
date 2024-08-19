@@ -2,7 +2,8 @@ import { CiCircleChevDown, CiHome, CiSearch, CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import User from "./Auth/User";
 import { useState } from "react";
-import { useFocus } from "../context/FocusContext";
+import { useFocus } from "../context/AppContext";
+// import { useFocus } from "../context/AppContext";
 
 const SideBar = () => {
   const [modal, setModal] = useState(false);

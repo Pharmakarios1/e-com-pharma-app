@@ -1,4 +1,5 @@
 import FeatureProduct from "../components/FeatureProduct";
+import SearchResult from "../components/SearchResult";
 
 const Blog = () => {
   return (
